@@ -15,9 +15,9 @@ const Payment = () => {
   const getSection = (seat) => {
     const row = seat.charAt(0);
 
-    if (["A", "B"].includes(row)) return "Bronze";
+    if (["A", "B"].includes(row)) return "Gold";
     if (["C", "D", "E", "F"].includes(row)) return "Silver";
-    if (["G", "H"].includes(row)) return "Gold";
+    if (["G", "H"].includes(row)) return "Bronze";
   };
 
   const totalPrice = seats.reduce((acc, seat) => {
@@ -26,7 +26,7 @@ const Payment = () => {
   }, 0);
 
   const handlePay = () => {
-    
+    alert('Payment Success')
     navigate("/scanner");
   };
 

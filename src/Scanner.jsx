@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Scanner = () => {
   const seats = useSelector((state) => state.seats.selectedSeats);
@@ -44,6 +45,7 @@ const Scanner = () => {
           Show this pass at theater entry.
         </p>
       </div>
+     <NavLink to={'/'}> <button className="my-2 text-xl text-white cursor-pointer bg-red-700 p-2 rounded-2xl">GoTo Home</button></NavLink>
     </div>
   );
 };

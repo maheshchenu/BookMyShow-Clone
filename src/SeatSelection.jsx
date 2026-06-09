@@ -36,7 +36,7 @@ const SeatSelection = () => {
     }
 
     dispatch(setSeats(selectedSeats));
-    navigate("/payment"); 
+    navigate("/payment");
   };
 
   return (
@@ -70,7 +70,7 @@ const SeatSelection = () => {
             >
               <span className="w-6 text-right font-semibold">{row}</span>
 
-              <div className="grid grid-cols-12 gap-2">
+              <div className="flex gap-1 sm:gap-2 flex-nowrap">
                 {Array.from({ length: seatsPerRow }, (_, index) => {
                   const seatId = `${row}${index + 1}`;
                   const isBooked = bookedSeats.includes(seatId);
@@ -80,7 +80,7 @@ const SeatSelection = () => {
                     <div
                       key={seatId}
                       onClick={() => toggleSeat(seatId)}
-                      className={`w-6 h-6 rounded cursor-pointer transition
+                      className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded cursor-pointer transition
                         ${
                           isBooked
                             ? "bg-red-500 cursor-not-allowed"
