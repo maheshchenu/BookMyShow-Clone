@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import logo from  '../assets/logo.png'
 const cities = [
   "Hyderabad",
   "Vijayawada",
@@ -37,7 +37,7 @@ const Nav = () => {
     
       <section className="flex flex-col sm:gap-7 gap-3 sm:flex-row sm:items-center">
         <NavLink to="/">
-          <img src="../src/assets/logo.png" alt="logo" className="w-48 h-10" />
+          <img src={logo} alt="logo" className="w-48 h-10" />
         </NavLink>
 
       
